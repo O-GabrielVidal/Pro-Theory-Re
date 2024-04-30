@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class sphere : shape
 {
@@ -10,7 +11,7 @@ public class sphere : shape
 
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
-        base.DisplayText(text, info);
+        text.text = "<rotate=-75>" + definition + "</rotate>";
     }
 
     // Start is called before the first frame update
@@ -22,7 +23,7 @@ public class sphere : shape
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
     private void OnMouseDown()

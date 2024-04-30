@@ -10,7 +10,7 @@ public class capsule : shape
 
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
-        base.DisplayText(text, info);
+        text.text = definition + "\n<sprite=4>\n<sprite=4>\n<sprite=4>";
     }
 
     // Start is called before the first frame update
