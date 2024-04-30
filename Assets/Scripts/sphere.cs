@@ -6,6 +6,12 @@ using UnityEngine;
 public class sphere : shape
 {
     GameObject screen;//Canvas
+    private string definition = "A round solid figure, or its surface, with every point on its surface equidistant from its center.";
+
+    public override void DisplayText(TextMeshProUGUI text, string info)
+    {
+        base.DisplayText(text, info);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +28,6 @@ public class sphere : shape
     private void OnMouseDown()
     {
         screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
-        DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), "sphere");
+        DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
     }
 }
