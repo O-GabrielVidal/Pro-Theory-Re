@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core.Reporting.Builders.Rendering;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,8 @@ public class sphere : shape
 {
     GameObject screen;//Canvas
     private string definition = "A round solid figure, or its surface, with every point on its surface equidistant from its center.";
+    private string name = "Sphere";
+    private string color = "Blue";
 
     public override void DisplayText(TextMeshProUGUI text, string info)
     {

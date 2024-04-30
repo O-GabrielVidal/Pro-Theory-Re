@@ -8,6 +8,8 @@ public class cube : shape
 {
     GameObject screen;//Canvas
     private string definition = "In geometry, a cube is a three-dimensional solid object bounded by six square faces, facets, or sides, with three meeting at each vertex. Viewed from a corner, it is a hexagon and its net is usually depicted as a cross.";
+    private string name = "Cube";
+    private string color = "Red";
 
     // Start is called before the first frame update
     void Start()

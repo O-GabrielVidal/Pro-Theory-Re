@@ -7,6 +7,8 @@ public class capsule : shape
 {
     GameObject screen;//Canvas
     private string definition = "A small case or container, especially a round or cylindrical one.";
+    private string name = "Capsule";
+    private string color = "Green";
 
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
