@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/FaseCube.unity
+    guid: e55331f73aad79c42872b6ec79c760a3
+  - enabled: 1
+    path: Assets/Scenes/FaseCapsule.unity
+    guid: 35cdb92a43c3fc8458c8e55d743ce91e
+  - enabled: 1
+    path: Assets/Scenes/FaseSphere.unity
+    guid: 170aaf12ab7a92c44b46537413cb1cb5
   m_configObjects: {}
