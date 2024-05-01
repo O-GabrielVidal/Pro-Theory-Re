@@ -15,8 +15,15 @@ public class MenuControl : MonoBehaviour
             inputField = GameObject.Find("Group").transform.GetChild(1).GetComponent<TMP_InputField>();
         }
     }
+
     public void Return()
     {
         GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public void SaveTheName()
+    {
+        SaveData.Instance.nameOfPlayer = inputField.text;
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
