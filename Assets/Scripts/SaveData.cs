@@ -6,6 +6,7 @@ public class SaveData : MonoBehaviour
 {
     public static SaveData Instance;
     public string nameOfPlayer;
+    public string nameOfShapeChoiced;
 
     private void Awake()
     {

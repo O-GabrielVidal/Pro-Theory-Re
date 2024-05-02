@@ -10,6 +10,15 @@ public class MovePlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 1, 0) * velocity * Time.deltaTime);
+        if (gameObject.CompareTag("Cube")==true)
+        {
+            transform.Rotate(new Vector3(0, 1, 0) * velocity * Time.deltaTime);
+        }
+        else if (gameObject.CompareTag("Sphere") == true){
+            transform.Rotate(new Vector3(0, 1, 0) * velocity * Time.deltaTime);
+        }else if (gameObject.CompareTag("Capsule") == true)
+        {
+            transform.Rotate(new Vector3(0, 0, 1) * velocity * Time.deltaTime);
+        }
     }
 }

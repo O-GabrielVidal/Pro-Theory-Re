@@ -9,8 +9,7 @@ public class sphere : shape
 {
     GameObject screen;//Canvas
     private string definition = "A round solid figure, or its surface, with every point on its surface equidistant from its center.";
-    private string name = "Sphere";
-    private string color = "Blue";
+    public string name { get; private set; }
 
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
@@ -33,5 +32,7 @@ public class sphere : shape
     {
         screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
         DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
+        name = "Sphere";
+        SaveData.Instance.nameOfShapeChoiced = name;
     }
 }

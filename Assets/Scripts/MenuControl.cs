@@ -26,4 +26,19 @@ public class MenuControl : MonoBehaviour
         SaveData.Instance.nameOfPlayer = inputField.text;
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
+
+    public void BeginTheGame()
+    {
+        if (SaveData.Instance.nameOfShapeChoiced == "Cube")
+        {
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
+        }else if(SaveData.Instance.nameOfShapeChoiced == "Sphere")
+        {
+            SceneManager.LoadScene(3, LoadSceneMode.Single);
+        }
+        else if (SaveData.Instance.nameOfShapeChoiced == "Capsule")
+        {
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
+        }
+    }
 }

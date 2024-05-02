@@ -7,8 +7,7 @@ public class capsule : shape
 {
     GameObject screen;//Canvas
     private string definition = "A small case or container, especially a round or cylindrical one.";
-    private string name = "Capsule";
-    private string color = "Green";
+    public string name { get;private set; }
 
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
@@ -31,5 +30,7 @@ public class capsule : shape
     {
         screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
         DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
+        name = "Capsule";
+        SaveData.Instance.nameOfShapeChoiced = name;
     }
 }
