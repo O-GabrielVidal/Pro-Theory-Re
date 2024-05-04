@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Choose this
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -509,6 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121230782f9bc4b428d7a411c257649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 15
 --- !u!65 &506927390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -992,6 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac23ca508920c2489e1ed4169609b58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 15
 --- !u!65 &717421034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1582,6 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5781c7390c04a254fba48fdf60ba3ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 15
 --- !u!65 &1927080685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1660,7 +1663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Return
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

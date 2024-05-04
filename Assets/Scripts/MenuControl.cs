@@ -10,10 +10,23 @@ public class MenuControl : MonoBehaviour
 
     private void Start()
     {
-        if(SceneManager.GetActiveScene().name== "Title")
+        if(SceneManager.GetActiveScene().name == "Title")
         {
             inputField = GameObject.Find("Group").transform.GetChild(1).GetComponent<TMP_InputField>();
+        }else if(SceneManager.GetActiveScene().name == "FaseCapsule")
+        {
+            GameObject.Find("Canvas").transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Player: " + SaveData.Instance.nameOfPlayer + "\nShape choiced: " + SaveData.Instance.nameOfShapeChoiced + "\nIf you touch the white cube you will win the game. For move use the buttons A, W, D, S or the arrows.";
+        }else if(SceneManager.GetActiveScene().name == "FaseCube")
+        {
+            GameObject.Find("Canvas").transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Player: " + SaveData.Instance.nameOfPlayer + "\nShape choiced: " + SaveData.Instance.nameOfShapeChoiced + "\nIf you touch the white cube you will win the game. For move use the buttons A, W, D, S or the arrows.";
+        }else if(SceneManager.GetActiveScene().name == "FaseSphere")
+        {
+            GameObject.Find("Canvas").transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Player: " + SaveData.Instance.nameOfPlayer + "\nShape choiced: " + SaveData.Instance.nameOfShapeChoiced + "\nIf you touch the white cube you will win the game. For move use the buttons A, W, D, S or the arrows.";
+        }else if(SceneManager.GetActiveScene().name == "Final")
+        {
+            StartCoroutine(Espera());//End the game
         }
+
     }
 
     public void Return()
@@ -40,5 +53,14 @@ public class MenuControl : MonoBehaviour
         {
             SceneManager.LoadScene(4, LoadSceneMode.Single);
         }
+    }
+
+    IEnumerator Espera()
+    {
+        yield return new WaitForSeconds(2);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 }

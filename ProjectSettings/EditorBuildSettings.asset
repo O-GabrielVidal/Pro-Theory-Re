@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FaseCapsule.unity
     guid: 35cdb92a43c3fc8458c8e55d743ce91e
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 85dd7a267ebdbb3458f2ce09ebcf19b8
   m_configObjects: {}

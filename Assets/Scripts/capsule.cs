@@ -28,19 +28,19 @@ public class capsule : shape
     {
         if(SceneManager.GetActiveScene().name == "FaseCapsule")
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.Translate(new Vector3(-1, 0, 0) * velocity * Time.deltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow))
             {
                 transform.Translate(new Vector3(1, 0, 0) * velocity * Time.deltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.UpArrow))
             {
                 transform.Translate(new Vector3(0, 0, 1) * velocity * Time.deltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.DownArrow))
             {
                 transform.Translate(new Vector3(0, 0, -1) * velocity * Time.deltaTime);
             }
@@ -49,9 +49,12 @@ public class capsule : shape
 
     private void OnMouseDown()
     {
-        screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
-        DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
-        name = "Capsule";
-        SaveData.Instance.nameOfShapeChoiced = name;
+        if(SceneManager.GetActiveScene().name== "SampleScene")
+        {
+            screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
+            DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
+            name = "Capsule";
+            SaveData.Instance.nameOfShapeChoiced = name;
+        }
     }
 }
