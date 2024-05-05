@@ -1,4 +1,3 @@
-using Palmmedia.ReportGenerator.Core.Reporting.Builders.Rendering;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,7 +9,7 @@ public class sphere : shape
 {
     GameObject screen;//Canvas
     private string definition = "A round solid figure, or its surface, with every point on its surface equidistant from its center.";
-    public string name { get; private set; }
+    public string nameShape { get; private set; }
     [SerializeField]
     private float velocity = 15f;
 
@@ -56,7 +55,7 @@ public class sphere : shape
             screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
             DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
             name = "Sphere";
-            SaveData.Instance.nameOfShapeChoiced = name;
+            SaveData.Instance.nameOfShapeChoiced = nameShape;
         }
     }
 }

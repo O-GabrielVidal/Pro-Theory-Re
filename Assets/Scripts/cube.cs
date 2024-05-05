@@ -9,7 +9,7 @@ public class cube : shape
 {
     GameObject screen;//Canvas
     private string definition = "In geometry, a cube is a three-dimensional solid object bounded by six square faces, facets, or sides, with three meeting at each vertex. Viewed from a corner, it is a hexagon and its net is usually depicted as a cross.";
-    public string name { get;private set; }
+    public string nameShape { get;private set; }
     [SerializeField]
     private float velocity = 15f;
 
@@ -50,7 +50,7 @@ public class cube : shape
             screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
             DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
             name = "Cube";
-            SaveData.Instance.nameOfShapeChoiced = name;
+            SaveData.Instance.nameOfShapeChoiced = nameShape;
         }
     }
 }

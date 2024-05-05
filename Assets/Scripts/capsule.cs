@@ -8,7 +8,7 @@ public class capsule : shape
 {
     GameObject screen;//Canvas
     private string definition = "A small case or container, especially a round or cylindrical one.";
-    public string name { get;private set; }
+    public string nameShape { get;private set; }
     [SerializeField]
     private float velocity = 15f;
 
@@ -54,7 +54,7 @@ public class capsule : shape
             screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
             DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
             name = "Capsule";
-            SaveData.Instance.nameOfShapeChoiced = name;
+            SaveData.Instance.nameOfShapeChoiced = nameShape;
         }
     }
 }
