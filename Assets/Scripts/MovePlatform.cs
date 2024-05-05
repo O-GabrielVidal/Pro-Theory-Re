@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovePlatform : MonoBehaviour
 {
+    // ENCAPSULATION
     [SerializeField]
     private float velocity = 10f;
 

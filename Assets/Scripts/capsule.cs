@@ -4,14 +4,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class capsule : shape
+public class capsule : shape// INHERITANCE
 {
     GameObject screen;//Canvas
     private string definition = "A small case or container, especially a round or cylindrical one.";
+    // ENCAPSULATION
     public string nameShape { get;private set; }
     [SerializeField]
     private float velocity = 15f;
 
+    // POLYMORPHISM
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
         text.text = definition + "\n<sprite=4>\n<sprite=4>\n<sprite=4>";
@@ -53,7 +55,7 @@ public class capsule : shape
         {
             screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
             DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
-            name = "Capsule";
+            nameShape = "Capsule";
             SaveData.Instance.nameOfShapeChoiced = nameShape;
         }
     }

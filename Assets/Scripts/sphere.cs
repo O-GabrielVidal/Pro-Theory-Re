@@ -5,14 +5,16 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-public class sphere : shape
+public class sphere : shape// INHERITANCE
 {
     GameObject screen;//Canvas
     private string definition = "A round solid figure, or its surface, with every point on its surface equidistant from its center.";
+    // ENCAPSULATION
     public string nameShape { get; private set; }
     [SerializeField]
     private float velocity = 15f;
 
+    // POLYMORPHISM
     public override void DisplayText(TextMeshProUGUI text, string info)
     {
         text.text = "<rotate=-75>" + definition + "</rotate>";
@@ -54,7 +56,7 @@ public class sphere : shape
         {
             screen.transform.GetChild(0).gameObject.SetActive(true);//Active the screen with info
             DisplayText(screen.transform.GetChild(0).transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>(), definition);
-            name = "Sphere";
+            nameShape = "Sphere";
             SaveData.Instance.nameOfShapeChoiced = nameShape;
         }
     }

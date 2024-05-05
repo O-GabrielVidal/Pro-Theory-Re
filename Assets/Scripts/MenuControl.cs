@@ -29,17 +29,20 @@ public class MenuControl : MonoBehaviour
 
     }
 
+    // ABSTRACTION
     public void Return()
     {
         GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);
     }
 
+    // ABSTRACTION
     public void SaveTheName()
     {
         SaveData.Instance.nameOfPlayer = inputField.text;
         SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
+    // ABSTRACTION
     public void BeginTheGame()
     {
         if (SaveData.Instance.nameOfShapeChoiced == "Cube")
@@ -55,6 +58,7 @@ public class MenuControl : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     IEnumerator Espera()
     {
         yield return new WaitForSeconds(2);
